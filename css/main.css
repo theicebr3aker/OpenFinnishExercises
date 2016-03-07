@@ -1,0 +1,41 @@
+input#answer{
+	margin:5px 0;
+}
+
+#number-answer-feedback{
+	margin:10px 0;
+}
+
+.correct-answer{
+	color:#00FF00;
+}
+
+.wrong-answer{
+	color:#FF0000;
+}
+
+#number{
+	font-size:16pt;
+}
+
+#pages-menu ul{
+	list-style:none;
+}
+
+#pages-menu ul li{
+	font-size:14pt;
+}
+
+h1{
+	text-align:center;
+}
+
+.correct-answers{
+	clear:both;
+	text-align:center;
+	margin:20px 0;
+}
+
+input.answer{
+	max-width:300px;
+}

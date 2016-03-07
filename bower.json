@@ -1,0 +1,11 @@
+{
+	"name": "OpenFinLang",
+	"version": "1.0.0",
+	"private": true,
+	"dependencies": {
+		"angular": "~1.4",
+		"angular-bootstrap": "~0.14",
+		"angular-ui-router": "~0.2.15",
+		"bootstrap": "~3.3.1"
+	}
+}

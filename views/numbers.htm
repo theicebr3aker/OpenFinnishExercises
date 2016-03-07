@@ -1,0 +1,28 @@
+<div ng-controller="numbersController as numCtrl">
+	<h2>Finnish numbers</h2>
+	<div>
+		<span id="number">{{ numCtrl.numberWord }}</span>
+	</div>
+
+	<label for="answer"></label>
+
+	<input ng-model="numCtrl.numberAnswer" class="form-control answer" type="text" name="answer" />
+	<br>
+	<button type="button" class="btn" ng-click="numCtrl.nextRandomNumber()">
+		Next number
+	</button>
+	<button type="button" class="btn btn-success" ng-click="numCtrl.evaluateAnswer()">
+		Submit
+	</button>
+
+	<div id="number-answer-feedback" ng-show="numCtrl.hasAnswered">
+		<div class="correct-answer" ng-show="numCtrl.isAnswerCorrect">
+			Right!
+		</div>
+
+		<div class="wrong-answer" ng-hide="numCtrl.isAnswerCorrect">
+			Wrong!
+		</div>
+	</div>
+	
+</div>

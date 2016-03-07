@@ -1,0 +1,43 @@
+<html>
+	<head>
+		<title>Finnish language</title>
+		<meta charset="utf8" />
+		<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/main.css" />
+	</head>
+
+	<body ng-app="open-finnish-lang">
+		<div id="page-container">
+			<h1>Finnish language</h1>
+
+			<div id="pages-menu" class="col-xs-2">
+				<ul>
+					<li>
+						<a href="#/numbers">Finnish numbers</a>
+					</li>
+					<li>
+						<a href="#/partitive">Partitive</a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="col-xs-10" ui-view=""></div>
+
+		</div>
+
+		<div class="correct-answers col-xs-12">
+			<span>Correct: {{ $root.correctAnswers }} / {{ $root.totalAnswers }}</span>
+		</div>
+
+		<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+		<script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="bower_components/angular/angular.js"></script>
+		<script type="text/javascript" src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+		<script type="text/javascript" src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+
+		<!-- application -->
+		<script type="text/javascript" src="js/app.js"></script>
+		<script type="text/javascript" src="js/numbers.controller.js"></script>
+		<script type="text/javascript" src="js/partitive.controller.js"></script>
+	</body>
+</html>
