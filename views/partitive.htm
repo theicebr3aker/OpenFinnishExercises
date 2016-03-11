@@ -1,1 +1,24 @@
 <h2>Partitive</h2>
+
+<h3>Singular</h3>
+<span>Give partitive for <i>{{ partCtrl.singularTestWord }}</i></span>
+
+<input type="text" ng-model="partCtrl.singularAnswer" class="form-control answer" />
+<br>
+<button class="btn" ng-click="partCtrl.promptNewTestWord()">
+	Next noun
+</button>
+
+<button class="btn btn-success" ng-click="partCtrl.evaluate()">
+	Submit
+</button>
+
+<div ng-show="partCtrl.hasAnswered">
+	<div class="correct-answer" ng-show="partCtrl.isAnswerCorrect">
+		Right!
+	</div>
+
+	<div class="wrong-answer" ng-hide="partCtrl.isAnswerCorrect">
+		Wrong!
+	</div>
+</div>
