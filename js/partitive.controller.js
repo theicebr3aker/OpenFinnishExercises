@@ -69,6 +69,7 @@
 		};
 		
 		self.evaluate = function(){
+			$rootScope.totalAnswers++;
 			rightAnswer = getRightAnswer(self.singularTestWord);
 			console.log(rightAnswer);
 			
