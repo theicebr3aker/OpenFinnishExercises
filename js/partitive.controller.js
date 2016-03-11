@@ -32,6 +32,10 @@
 				}
 				else return word + isFrontVowelWord(word) ? "a" : "ä";
 			}
+			else if(word.endsWith("e")){
+				var postfix = isFrontVowelWord(word) ? "tta" : "ttä";
+				return word + postfix;
+			}
 			else if(word.endsWith("nen")){
 				var idx = word.lastIndexOf("nen");
 				return word.substring(0, idx) + "sta";
@@ -47,12 +51,8 @@
 				var postfix = isFrontVowelWord(word) ? "ta" : "tä";
 				return word + postfix;
 			}
-			else if(/[aeioquyåäö]{1}$/.test(word)){
+			else if(/[aeioquyåäö]{1}$/.test(word)){ //any other vowel ex
 				var postfix = isFrontVowelWord(word) ? "a" : "ä";
-				return word + postfix;
-			}
-			else if(word.endsWith("e")){
-				var postfix = isFrontVowelWord(word) ? "tta" : "ttä";
 				return word + postfix;
 			}
 			else throw new Error("Unknown word"); //to catch them all
