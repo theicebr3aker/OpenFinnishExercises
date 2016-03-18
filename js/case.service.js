@@ -49,6 +49,7 @@
 			else throw new Error("Unknown word");  //to catch them all
 		}
 		
+		//doesn't handle loadwords which don't respect vowel harmony
 		function isFrontVowelWord(word){
 			var isFront = /^[abcdefghijklmnopqrstuvwxz]+$/.test(word);
 			return isFront;
