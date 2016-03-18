@@ -71,7 +71,7 @@
 				var tensWord = oneTenNumbers.get(parseInt(tens, 10));
 				
 				var ones = num.toString()[1];
-				var onesWord = oneTenNumbers.get(parseInt(ones, 10));
+				var onesWord = (ones === "0") ? "" : oneTenNumbers.get(parseInt(ones, 10));
 				return tensWord + tensPostfix + onesWord;
 			}
 			
