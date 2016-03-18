@@ -33,26 +33,25 @@
 		self.isAnswerCorrect = false;
 		
 		self.nextRandomNumber = function(){
-			self.hasAnswered = false;
-			self.numberAnswer = null;
+			$rootScope.$broadcast('result.reset');
 			randomNumber = getRandomNumber(minNumber, maxNumber);
 			self.numberWord = formNumberWord(randomNumber);
 			
-			//console.log('random num', randomNumber);
 			console.log(self.numberWord);
 		};
 		
-		self.evaluateAnswer = function(){
-			$rootScope.totalAnswers++;
-			
+		self.evaluateAnswer = function(){			
 			console.log(self.numberAnswer);
 			console.log('random num', randomNumber);
-			self.hasAnswered = true;
 			
-			self.isAnswerCorrect = parseInt(self.numberAnswer, 10) === randomNumber;
+			var isAnswerCorrect = parseInt(self.numberAnswer, 10) === randomNumber;
 			
-			if(self.isAnswerCorrect)
-				$rootScope.correctAnswers++;
+			if(isAnswerCorrect){
+				$rootScope.$broadcast('result.correct');
+			}
+			else{
+				$rootScope.$broadcast('result.false');
+			}
 		};
 		
 		function formNumberWord(num){	
