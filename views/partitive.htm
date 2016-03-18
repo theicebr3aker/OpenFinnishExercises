@@ -5,6 +5,7 @@
 
 <input type="text" ng-model="partCtrl.singularAnswer" class="form-control answer" />
 <br>
+
 <button class="btn" ng-click="partCtrl.promptNewTestWord()">
 	Next noun
 </button>
@@ -13,12 +14,4 @@
 	Submit
 </button>
 
-<div ng-show="partCtrl.hasAnswered">
-	<div class="correct-answer" ng-show="partCtrl.isAnswerCorrect">
-		Right!
-	</div>
 
-	<div class="wrong-answer" ng-hide="partCtrl.isAnswerCorrect">
-		Wrong!
-	</div>
-</div>

@@ -23,12 +23,25 @@
 
 			<div class="col-xs-10" ui-view=""></div>
 
+		<div id="results" ng-controller="resultsController as resultCtrl">
+			<div id="result-text" ng-show="resultCtrl.hasAnswered">
+				<div class="correct-answer" ng-show="resultCtrl.isAnswerCorrect">
+					Right!
+				</div>
+
+				<div class="wrong-answer" ng-hide="resultCtrl.isAnswerCorrect">
+					Wrong!
+				</div>
+			</div>
+			
+			<div class="correct-answers col-xs-12" id="answer-ratio-holder">
+				<span id="answer-ratio">Correct: {{ resultCtrl.correct }} / {{ resultCtrl.total }}</span>
+			</div>
+			
 		</div>
 
-		<div class="correct-answers col-xs-12">
-			<span>Correct: {{ $root.correctAnswers }} / {{ $root.totalAnswers }}</span>
 		</div>
-
+	
 		<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
 		<script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="bower_components/angular/angular.js"></script>
@@ -40,5 +53,7 @@
 		<script type="text/javascript" src="js/consts.js"></script>
 		<script type="text/javascript" src="js/numbers.controller.js"></script>
 		<script type="text/javascript" src="js/partitive.controller.js"></script>
+		<script type="text/javascript" src="js/results.controller.js"></script>
+		<script type="text/javascript" src="js/case.service.js"></script>
 	</body>
 </html>

@@ -30,7 +30,7 @@ h1{
 	text-align:center;
 }
 
-.correct-answers{
+#answer-ratio-holder{
 	clear:both;
 	text-align:center;
 	margin:20px 0;
@@ -38,4 +38,18 @@ h1{
 
 input.answer{
 	max-width:300px;
+}
+
+#answer-ratio{
+	font-size:14pt;
+}
+
+#result-text{
+	margin:10px 0;
+	text-align:center;
+}
+
+#results{
+	clear:both;
+	margin:5px 0;
 }
