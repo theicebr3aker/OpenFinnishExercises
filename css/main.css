@@ -7,7 +7,7 @@ input#answer{
 }
 
 .correct-answer{
-	color:#00FF00;
+	color:#0abf8d;
 }
 
 .wrong-answer{
@@ -52,4 +52,5 @@ input.answer{
 #results{
 	clear:both;
 	margin:5px 0;
+	font-size:14pt;
 }
