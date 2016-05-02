@@ -50,7 +50,7 @@
 				$rootScope.$broadcast('result.correct');
 			}
 			else{
-				$rootScope.$broadcast('result.false');
+				$rootScope.$broadcast('result.false', randomNumber);
 			}
 		};
 		

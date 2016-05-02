@@ -10,21 +10,25 @@
 		
 		self.hasAnswered = false;
 		self.isAnswerCorrect = false;
+		self.lastCorrectAnswer = '';
 		
 		$rootScope.$on('result.correct', function(){ processResult(true) });
-		$rootScope.$on('result.false', function() { processResult(false) });
+		$rootScope.$on('result.false', function(evt, correctResult) { processResult(false, correctResult) });
 		$rootScope.$on('result.reset', function(){ reset(); });
 		
-		function processResult(isCorrect){
-			console.log('processing', isCorrect);
+		function processResult(isCorrect, correctResult){
+			console.log('processing', isCorrect, correctResult);
 			self.hasAnswered = true;
+			self.lastCorrectAnswer = '';
 			
 			if(isCorrect){
 				self.correct++;
 				self.isAnswerCorrect = true;
 			}
-			else 
+			else{
 				self.isAnswerCorrect = false;
+				self.lastCorrectAnswer = correctResult;
+			}
 			
 			self.total++;
 		}
